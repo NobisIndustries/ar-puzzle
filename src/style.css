@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("bg.jpg") repeat black;
+    text-align: center;
+}
+
+#main {
+    visibility: hidden;
+}
+
+@media (orientation: portrait) {
+    .main-element {
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .controls {
+        z-index: 200;
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+    }
+}
+@media (orientation: landscape) {
+    .main-element {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        right: 0;
+        width: auto;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .controls {
+        z-index: 200;
+        position: absolute;
+        top: 1rem;
+        left: 3rem;
+    }
+}
+
+#overlay {
+    z-index: 10;
+}
+
+.error {
+    margin: 1rem;
+    padding: 1rem;
+    background: rgba(210, 0, 46, 0.15);
+    border: 0.2rem solid rgba(210, 0, 46, 1.0);
+    border-radius: 1rem;
+    color: rgba(210, 0, 46, 1.0);
+}
+
+.no-display {
+    display: none;
+}
+
+.no-visible {
+    visibility: hidden;
+}
+
+.cool-button {
+    background: rgba(247, 81, 103, 0.16);
+    border: 0.2rem solid #f75167;
+    color: #f75167;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 50rem;
+}
+
+.cool-button:active {
+    background-color: rgba(247, 81, 103, 1.0);
+    color: #ffffff;
+}
+
+.quadratic {
+    width: 3rem;
+    height: 3rem;
+}
+
+#start {
+    font-size: 3rem;
+    padding: 2rem;
+    font-weight: bold;
+    margin-top: 30vh;
+
+}
