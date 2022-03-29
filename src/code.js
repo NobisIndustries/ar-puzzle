@@ -159,9 +159,10 @@ async function setupCamera(videoElement) {
 }
 
 async function loadModels() {
-    await faceapi.loadTinyFaceDetectorModel('/models')
-    await faceapi.loadFaceLandmarkTinyModel('/models')
-    await faceapi.loadFaceRecognitionModel('/models')
+    const baseUrl = `${window.location.href}/models`
+    await faceapi.loadTinyFaceDetectorModel(baseUrl)
+    await faceapi.loadFaceLandmarkTinyModel(baseUrl)
+    await faceapi.loadFaceRecognitionModel(baseUrl)
 }
 
 function setupCanvas(inputElement, outputElement) {
