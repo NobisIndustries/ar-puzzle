@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faces</title>
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+<div class="error no-display" id="noCameraPermission">
+    Please allow this website to use your device camera.
+</div>
+<button id="start" class="cool-button">Start</button>
+<div id="main" class="no-visible">
+    <video id="myVideo" class="main-element" autoplay muted></video>
+    <canvas id="overlay" class="main-element"></canvas>
+
+    <div class="controls">
+        <button class="cool-button quadratic" title="ChangeCamera" id="changeCamera"><img src="camera-flip.svg"/>
+        </button>
+    </div>
+</div>
+
+
+</body>
+</html>
