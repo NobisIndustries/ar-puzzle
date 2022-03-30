@@ -9,9 +9,12 @@
 </head>
 <body>
 <div class="error no-display" id="noCameraPermission">
-    Please allow this website to use your device camera.
+    Could not access camera. Please allow this website to use your device camera.
 </div>
-<button id="start" class="cool-button">Start</button>
+<div id="startContainer">
+    <button id="startButton" class="cool-button">Start</button>
+    <div>Please allow this website to use your device camera.</div>
+</div>
 <div id="main" class="no-visible">
     <video id="myVideo" class="main-element" autoplay muted></video>
     <canvas id="overlay" class="main-element"></canvas>

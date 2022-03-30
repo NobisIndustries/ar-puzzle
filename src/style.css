@@ -3,6 +3,8 @@ body {
     padding: 0;
     background: url("bg.jpg") repeat black;
     text-align: center;
+    color: #ffffff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 #main {
@@ -88,10 +90,14 @@ body {
     height: 3rem;
 }
 
-#start {
+#startContainer {
+    margin-top: 30vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+#startButton {
     font-size: 3rem;
     padding: 2rem;
     font-weight: bold;
-    margin-top: 30vh;
-
+    margin-bottom: 1rem;
 }

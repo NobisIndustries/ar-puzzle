@@ -245,21 +245,22 @@ async function requestCameraPermission() {
     }
 }
 
-async function main() {
+async function start(inputElement, outputElement) {
     if (!(await requestCameraPermission()))
         return;
+    await setupCamera(inputElement)
+    document.documentElement.requestFullscreen()
+    document.getElementById("startContainer").style.display = "none"
+    document.getElementById("main").style.visibility = "visible"
+    setupFaceRecognition(inputElement, outputElement)  // On Android, the initial autoplay does not trigger a play event
+}
 
+async function main() {
     let inputElement = document.getElementById("myVideo")
     const outputElement = document.getElementById('overlay')
-    await setupCamera(inputElement)
     await loadModels()
-    const startButton = document.getElementById("start")
-    startButton.addEventListener("click", () =>{
-        document.documentElement.requestFullscreen()
-        startButton.style.display = "none"
-        document.getElementById("main").style.visibility = "visible"
-        setupFaceRecognition(inputElement, outputElement)  // On Android, the initial autoplay does not trigger a play event
-    })
+    const startButton = document.getElementById("startButton")
+    startButton.addEventListener("click", () => start(inputElement, outputElement))
     inputElement.addEventListener('play', () => setupFaceRecognition(inputElement, outputElement))
     window.addEventListener("orientationchange",(event) => setupCanvas(inputElement, outputElement))
 }
